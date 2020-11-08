@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'doviz',
+    loadChildren: () => import('./doviz/doviz.module').then( m => m.DovizPageModule)
+  },
+  {
+    path: 'cevirici',
+    loadChildren: () => import('./cevirici/cevirici.module').then( m => m.CeviriciPageModule)
+  },
+  {
+    path: 'piyasa',
+    loadChildren: () => import('./piyasa/piyasa.module').then( m => m.PiyasaPageModule)
+  },
 ];
 
 @NgModule({
